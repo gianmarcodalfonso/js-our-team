@@ -59,3 +59,8 @@ const cardMaker = (member) => {
         </div>`
     return memberCard
 }
+const cardList = document.getElementById(`card-list`)
+for(let i = 0; i < teamMembers.length; i++){
+  let card = cardMaker(teamMembers[i])
+  cardList.innerHTML += card;
+}
