@@ -36,3 +36,26 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+
+const cardMaker = (member) => {
+  let memberCard = `<div id="card-box" class="col-12 col-md-6 col-lg-4">
+          <div class="box">
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-4">
+                  <img src="./${member.img}" class="img-fluid h-100" alt="...">
+                </div>
+                <div class="col-8">
+                  <div class="card-body bg-black text-white h-100">
+                    <h5 class="card-title">${member.name}</h5>
+                    <p class="card-text">${member.role}</p>
+                    <a href="mailto:">${member.email}/a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`
+    return memberCard
+}
